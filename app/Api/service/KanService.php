@@ -2,12 +2,18 @@
 
 namespace app\Api\service;
 
-use app\utils\BaseCache;
+use app\Api\config\filter\KanFilter;
+use app\Utils\BaseCache;
 use app\Utils\BaseRequest;
 use app\Utils\Url;
 
 class KanService
 {
+    public static function Filter(): array
+    {
+        return KanFilter::all();
+    }
+
     public static function List($params): array
     {
         $url = Url::Kan("/filter/list");

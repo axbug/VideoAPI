@@ -1,0 +1,225 @@
+<?php
+
+namespace app\Api\config\filter\kan;
+
+class zongyi
+{
+    public static function config():array
+    {
+        $json = self::json();
+        return json_decode($json,true);
+    }
+
+    private static function json(): string
+    {
+        return <<<EOL
+            [{
+                "data": [{
+                    "title": "最近热映",
+                    "id": "rankhot"
+                }, {
+                    "title": "最近上映",
+                    "id": "ranklatest"
+                }],
+                "iteratorEvents": ["click"],
+                "label": "排序",
+                "name": "rank",
+                "defaultId": "rankhot"
+            }, {
+                "data": [{
+                    "title": "全部",
+                    "id": ""
+                }, {
+                    "title": "脱口秀",
+                    "id": "脱口秀"
+                }, {
+                    "title": "真人秀",
+                    "id": "真人秀",
+                    "hot": true
+                }, {
+                    "title": "搞笑",
+                    "id": "搞笑"
+                }, {
+                    "title": "选秀",
+                    "id": "选秀"
+                }, {
+                    "title": "八卦",
+                    "id": "八卦"
+                }, {
+                    "title": "访谈",
+                    "id": "访谈"
+                }, {
+                    "title": "情感",
+                    "id": "情感"
+                }, {
+                    "title": "生活",
+                    "id": "生活"
+                }, {
+                    "title": "晚会",
+                    "id": "晚会"
+                }, {
+                    "title": "音乐",
+                    "id": "音乐"
+                }, {
+                    "title": "职场",
+                    "id": "职场"
+                }, {
+                    "title": "美食",
+                    "id": "美食"
+                }, {
+                    "title": "时尚",
+                    "id": "时尚"
+                }, {
+                    "title": "游戏",
+                    "id": "游戏"
+                }, {
+                    "title": "少儿",
+                    "id": "少儿"
+                }, {
+                    "title": "体育",
+                    "id": "体育"
+                }, {
+                    "title": "纪实",
+                    "id": "纪实"
+                }, {
+                    "title": "科教",
+                    "id": "科教"
+                }, {
+                    "title": "曲艺",
+                    "id": "曲艺"
+                }, {
+                    "title": "歌舞",
+                    "id": "歌舞"
+                }, {
+                    "title": "财经",
+                    "id": "财经"
+                }, {
+                    "title": "汽车",
+                    "id": "汽车"
+                }, {
+                    "title": "播报",
+                    "id": "播报"
+                }, {
+                    "title": "其他",
+                    "id": "其他"
+                }],
+                "iteratorEvents": ["click"],
+                "label": "类型",
+                "name": "cat",
+                "defaultId": ""
+            }, {
+                "data": [{
+                    "title": "全部",
+                    "id": ""
+                }, {
+                    "title": "邓超",
+                    "id": "邓超"
+                }, {
+                    "title": "陈赫",
+                    "id": "陈赫"
+                }, {
+                    "title": "何炅",
+                    "id": "何炅"
+                }, {
+                    "title": "汪涵",
+                    "id": "汪涵"
+                }, {
+                    "title": "王俊凯",
+                    "id": "王俊凯",
+                    "hot": true
+                }, {
+                    "title": "黄磊",
+                    "id": "黄磊"
+                }, {
+                    "title": "谢娜",
+                    "id": "谢娜"
+                }, {
+                    "title": "黄渤",
+                    "id": "黄渤"
+                }, {
+                    "title": "周杰伦",
+                    "id": "周杰伦"
+                }, {
+                    "title": "薛之谦",
+                    "id": "薛之谦"
+                }, {
+                    "title": "Angelababy",
+                    "id": "Angelababy"
+                }, {
+                    "title": "易烊千玺",
+                    "id": "易烊千玺"
+                }, {
+                    "title": "岳云鹏",
+                    "id": "岳云鹏"
+                }, {
+                    "title": "王嘉尔",
+                    "id": "王嘉尔"
+                }, {
+                    "title": "鹿晗",
+                    "id": "鹿晗"
+                }, {
+                    "title": "杨幂",
+                    "id": "杨幂"
+                }, {
+                    "title": "沈腾",
+                    "id": "沈腾"
+                }, {
+                    "title": "张艺兴",
+                    "id": "张艺兴"
+                }, {
+                    "title": "潘玮柏",
+                    "id": "潘玮柏"
+                }, {
+                    "title": "华晨宇",
+                    "id": "华晨宇"
+                }, {
+                    "title": "李维嘉",
+                    "id": "李维嘉"
+                }, {
+                    "title": "宋小宝",
+                    "id": "宋小宝"
+                }, {
+                    "title": "贾玲",
+                    "id": "贾玲"
+                }, {
+                    "title": "沙溢",
+                    "id": "沙溢"
+                }, {
+                    "title": "撒贝宁",
+                    "id": "撒贝宁"
+                }, {
+                    "title": "涂磊",
+                    "id": "涂磊"
+                }],
+                "iteratorEvents": ["click"],
+                "label": "明星",
+                "name": "act",
+                "defaultId": ""
+            }, {
+                "data": [{
+                    "title": "全部",
+                    "id": ""
+                }, {
+                    "title": "内地",
+                    "id": "大陆"
+                }, {
+                    "title": "中国香港",
+                    "id": "香港"
+                }, {
+                    "title": "中国台湾",
+                    "id": "台湾"
+                }, {
+                    "title": "日本",
+                    "id": "日本"
+                }, {
+                    "title": "欧美",
+                    "id": "欧美"
+                }],
+                "iteratorEvents": ["click"],
+                "label": "地区",
+                "name": "area",
+                "defaultId": ""
+            }]
+EOL;
+    }
+}

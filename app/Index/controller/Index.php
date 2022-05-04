@@ -10,8 +10,4 @@ class Index extends BaseController
     {
         return "360Kan API";
     }
-
-    public function List(){
-        return BaseRequest::Request();
-    }
 }

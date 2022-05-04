@@ -6,6 +6,11 @@ use app\Api\service\KanService;
 
 class KanController extends BaseController
 {
+    public function Filter(){
+        $result = KanService::Filter();
+        app("json")->Success($result);
+    }
+
     public function List(){
         $result = KanService::List($this->request->param());
         app("json")->Success($result);

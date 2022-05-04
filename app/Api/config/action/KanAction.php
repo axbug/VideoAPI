@@ -1,8 +1,8 @@
 <?php
 
-namespace app\Api\config\route;
+namespace app\Api\config\action;
 
-class KanRoute{
+class KanAction{
     public static function config(): array
     {
         return [

@@ -1,0 +1,233 @@
+<?php
+
+namespace app\Api\config\filter\kan;
+
+class dongman
+{
+    public static function config():array
+    {
+        $json = self::json();
+        return json_decode($json,true);
+    }
+
+    private static function json(): string
+    {
+        return <<<EOL
+            [{
+                "data": [{
+                    "title": "最近热映",
+                    "id": "rankhot"
+                }, {
+                    "title": "最近上映",
+                    "id": "ranklatest"
+                }],
+                "iteratorEvents": ["click"],
+                "label": "排序",
+                "name": "rank",
+                "defaultId": "rankhot"
+            }, {
+                "data": [{
+                    "title": "全部",
+                    "id": ""
+                }, {
+                    "title": "热血",
+                    "id": "热血",
+                    "hot": true
+                }, {
+                    "title": "科幻",
+                    "id": "科幻"
+                }, {
+                    "title": "美少女",
+                    "id": "美少女"
+                }, {
+                    "title": "魔幻",
+                    "id": "魔幻"
+                }, {
+                    "title": "经典",
+                    "id": "经典"
+                }, {
+                    "title": "励志",
+                    "id": "励志"
+                }, {
+                    "title": "少儿",
+                    "id": "少儿"
+                }, {
+                    "title": "冒险",
+                    "id": "冒险"
+                }, {
+                    "title": "搞笑",
+                    "id": "搞笑"
+                }, {
+                    "title": "推理",
+                    "id": "推理"
+                }, {
+                    "title": "恋爱",
+                    "id": "恋爱"
+                }, {
+                    "title": "治愈",
+                    "id": "治愈"
+                }, {
+                    "title": "幻想",
+                    "id": "幻想"
+                }, {
+                    "title": "校园",
+                    "id": "校园"
+                }, {
+                    "title": "动物",
+                    "id": "动物"
+                }, {
+                    "title": "机战",
+                    "id": "机战"
+                }, {
+                    "title": "亲子",
+                    "id": "亲子"
+                }, {
+                    "title": "儿歌",
+                    "id": "儿歌"
+                }, {
+                    "title": "运动",
+                    "id": "运动"
+                }, {
+                    "title": "悬疑",
+                    "id": "悬疑"
+                }, {
+                    "title": "怪物",
+                    "id": "怪物"
+                }, {
+                    "title": "战争",
+                    "id": "战争"
+                }, {
+                    "title": "益智",
+                    "id": "益智"
+                }, {
+                    "title": "青春",
+                    "id": "青春"
+                }, {
+                    "title": "童话",
+                    "id": "童话"
+                }, {
+                    "title": "竞技",
+                    "id": "竞技"
+                }, {
+                    "title": "动作",
+                    "id": "动作"
+                }, {
+                    "title": "社会",
+                    "id": "社会"
+                }, {
+                    "title": "友情",
+                    "id": "友情"
+                }, {
+                    "title": "真人版",
+                    "id": "真人版"
+                }, {
+                    "title": "电影版",
+                    "id": "电影版"
+                }, {
+                    "title": "OVA版",
+                    "id": "OVA版"
+                }, {
+                    "title": "TV版",
+                    "id": "TV版"
+                }, {
+                    "title": "新番动画",
+                    "id": "新番动画"
+                }, {
+                    "title": "完结动画",
+                    "id": "完结动画"
+                }],
+                "iteratorEvents": ["click"],
+                "label": "类型",
+                "name": "cat",
+                "defaultId": ""
+            }, {
+                "data": [{
+                    "title": "全部",
+                    "id": ""
+                }, {
+                    "title": "2022",
+                    "id": "2022"
+                }, {
+                    "title": "2021",
+                    "id": "2021"
+                }, {
+                    "title": "2020",
+                    "id": "2020"
+                }, {
+                    "title": "2019",
+                    "id": "2019"
+                }, {
+                    "title": "2018",
+                    "id": "2018"
+                }, {
+                    "title": "2017",
+                    "id": "2017"
+                }, {
+                    "title": "2016",
+                    "id": "2016"
+                }, {
+                    "title": "2015",
+                    "id": "2015"
+                }, {
+                    "title": "2014",
+                    "id": "2014"
+                }, {
+                    "title": "2013",
+                    "id": "2013"
+                }, {
+                    "title": "2012",
+                    "id": "2012"
+                }, {
+                    "title": "2011",
+                    "id": "2011"
+                }, {
+                    "title": "2010",
+                    "id": "2010"
+                }, {
+                    "title": "2009",
+                    "id": "2009"
+                }, {
+                    "title": "2008",
+                    "id": "2008"
+                }, {
+                    "title": "2007",
+                    "id": "2007"
+                }, {
+                    "title": "2006",
+                    "id": "2006"
+                }, {
+                    "title": "2005",
+                    "id": "2005"
+                }, {
+                    "title": "2004",
+                    "id": "2004"
+                }, {
+                    "title": "更早",
+                    "id": "更早"
+                }],
+                "iteratorEvents": ["click"],
+                "label": "年代",
+                "name": "year",
+                "defaultId": ""
+            }, {
+                "data": [{
+                    "title": "全部",
+                    "id": ""
+                }, {
+                    "title": "内地",
+                    "id": "大陆"
+                }, {
+                    "title": "日本",
+                    "id": "日本"
+                }, {
+                    "title": "美国",
+                    "id": "美国"
+                }],
+                "iteratorEvents": ["click"],
+                "label": "地区",
+                "name": "area",
+                "defaultId": ""
+            }]
+EOL;
+    }
+}

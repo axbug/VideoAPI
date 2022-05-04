@@ -3,11 +3,9 @@ declare (strict_types = 1);
 
 namespace app\Api\controller;
 
-use app\utils\BaseCache;
+use app\Utils\BaseCache;
 use think\App;
 use think\exception\ValidateException;
-use think\facade\Cache;
-use think\facade\Request;
 
 abstract class BaseController
 {
@@ -33,8 +31,6 @@ abstract class BaseController
                 $data = BaseCache::Get();
                 if(!empty($data)) app("json")->Success($data);
             }
-        }else{
-            app("json")->Fail("路由不存在！");
         }
     }
 
