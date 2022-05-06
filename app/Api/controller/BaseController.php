@@ -3,8 +3,10 @@ declare (strict_types = 1);
 
 namespace app\Api\controller;
 
+use app\utils\BaseCache;
 use think\App;
 use think\exception\ValidateException;
+use think\facade\Cache;
 use think\facade\Request;
 
 abstract class BaseController
@@ -23,10 +25,14 @@ abstract class BaseController
     protected function initialize()
     {
         $routeList = config("Route");
-        $controller = strtolower($this->request->controller());
-        $action = strtolower($this->request->action());
+        $controller = $this->request->controller(true);
+        $action = $this->request->action(true);
         if(isset($routeList[$controller]["action"][$action])){
             $this->validate($routeList[$controller]["validate"],$routeList[$controller]["action"][$action]["scene"]);
+            if(env("CACHE.KAN")){
+                $data = BaseCache::Get();
+                if(!empty($data)) app("json")->Success($data);
+            }
         }else{
             app("json")->Fail("路由不存在！");
         }

@@ -2,6 +2,7 @@
 
 namespace app\Api\service;
 
+use app\utils\BaseCache;
 use app\Utils\BaseRequest;
 use app\Utils\Url;
 
@@ -53,6 +54,7 @@ class KanService
         if(empty($result)) app("json")->Error("服务器内部请求异常！");
         $data = json_decode($result,true);
         if($data[$statusKey]) app("json")->Error($data["msg"]);
+        if(env("Cache.Kan")) BaseCache::Create($data["data"]);
         return $data["data"];
     }
 }
