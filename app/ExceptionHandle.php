@@ -3,9 +3,11 @@ namespace app;
 
 use think\db\exception\DataNotFoundException;
 use think\db\exception\ModelNotFoundException;
+use think\exception\ClassNotFoundException;
 use think\exception\Handle;
 use think\exception\HttpException;
 use think\exception\HttpResponseException;
+use think\exception\RouteNotFoundException;
 use think\exception\ValidateException;
 use think\Response;
 use Throwable;
@@ -50,9 +52,10 @@ class ExceptionHandle extends Handle
      */
     public function render($request, Throwable $e): Response
     {
-        // 添加自定义异常处理机制
-
-        // 其他错误交给系统处理
+        # 捕捉路由异常
+        if(($e instanceof ClassNotFoundException || $e instanceof RouteNotFoundException) || ($e instanceof HttpException && $e->getStatusCode()==404)){
+            app("json")->Fail("路由不存在！");
+        }
         return parent::render($request, $e);
     }
 }

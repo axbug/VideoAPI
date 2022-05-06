@@ -7,4 +7,7 @@ return [
     // \think\middleware\LoadLangPack::class,
     // Session初始化
     // \think\middleware\SessionInit::class
+
+    // 允许跨域请求
+    \app\Utils\CrossDomain::class
 ];
