@@ -1,6 +1,6 @@
 <?php
 
-namespace app\utils;
+namespace app\Utils;
 
 use think\facade\Cache;
 use think\facade\Request;
